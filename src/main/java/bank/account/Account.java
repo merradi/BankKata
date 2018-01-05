@@ -47,10 +47,4 @@ public class Account {
 	public void setClient(Customer client) {
 		this.client = client;
 	}
-
-//    public Account copy() {
-//        return new Account(this.client, this.transactions);
-//    }
-
-    
 }
