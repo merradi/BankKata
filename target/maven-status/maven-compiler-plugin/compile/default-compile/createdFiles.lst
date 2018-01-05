@@ -1,0 +1,8 @@
+bank\Bank.class
+bank\exceptions\WithdrawAmountValidityException.class
+bank\account\Account.class
+bank\account\Customer.class
+bank\exceptions\WithdrawIsNotPermitedException.class
+bank\operation\Operation.class
+bank\exceptions\AmountBelowMinimumException.class
+bank\operation\OperationType.class

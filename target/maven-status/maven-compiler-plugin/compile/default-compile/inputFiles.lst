@@ -1,0 +1,8 @@
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\Bank.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\exceptions\AmountBelowMinimumException.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\exceptions\WithdrawAmountValidityException.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\account\Account.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\exceptions\WithdrawIsNotPermitedException.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\operation\OperationType.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\operation\Operation.java
+C:\Users\marouane.erradi\Pictures\BankKata-master (1)\BankKata-master\src\main\java\bank\account\Customer.java
