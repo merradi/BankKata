@@ -9,6 +9,7 @@ import java.util.List;
 
 import bank.account.Account;
 import bank.account.Customer;
+import bank.exception.BankOperationException;
 import bank.operation.Operation;
 import bank.operation.OperationType;
 
@@ -33,9 +34,9 @@ public class Bank {
         return account;
     }
     
-    public void addDepositOperation(Account account, int operation_amount) throws Exception {
+    public void addDepositOperation(Account account, int operation_amount) throws BankOperationException {
     	if (!isPositive(operation_amount)) {
-    		throw new Exception("Amount can't be negative");
+    		throw new BankOperationException("Amount can't be negative");
     	}
     	int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() + operation_amount;
     	
