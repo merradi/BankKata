@@ -1,7 +1,5 @@
 package bank.operation;
 
-import java.util.Date;
-
 public class Operation {
 	
 	  private OperationType operation_Type;
@@ -16,27 +14,27 @@ public class Operation {
 			this.setBalance(balance);
 		}
 
-		public OperationType getOperation_Type() {
+		public OperationType getOperationType() {
 			return operation_Type;
 		}
 
-		public void setOperation_Type(OperationType operation_Type) {
+		public void setOperationType(OperationType operation_Type) {
 			this.operation_Type = operation_Type;
 		}
 
-		public int getOperation_amount() {
+		public int getOperationAmount() {
 			return operation_amount;
 		}
 
-		public void setOperation_amount(int operation_amount) {
+		public void setOperationAmount(int operation_amount) {
 			this.operation_amount = operation_amount;
 		}
 
-		public String getOperation_date() {
+		public String getOperationDate() {
 			return operation_date;
 		}
 
-		public void setOperation_date(String operation_date) {
+		public void getOperationDate(String operation_date) {
 			this.operation_date = operation_date;
 		}
 

@@ -14,8 +14,8 @@ public class StatementPrinter {
 		result.append(HEADER);
 		result.append("\n");
 		for (Operation operation : bankAccount.getOperations()) {
-			result.append(operation.getOperation_date() + "|" + operation.getOperation_Type() +
-					  "|" + operation.getOperation_amount() + "|" + operation.getBalance());
+			result.append(operation.getOperationDate() + "|" + operation.getOperationType() +
+					  "|" + operation.getOperationAmount() + "|" + operation.getBalance());
 			result.append("\n");
 		}
 		

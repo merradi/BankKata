@@ -32,11 +32,11 @@ public class Account {
         return Collections.unmodifiableList(this.operations);
     }
 
-	public String getAccount_Id() {
+	public String getAccountId() {
 		return account_Id;
 	}
 
-	public void setAccount_Id(String account_Id) {
+	public void setAccountId(String account_Id) {
 		this.account_Id = account_Id;
 	}
 
