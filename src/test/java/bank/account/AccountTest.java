@@ -21,7 +21,7 @@ public class AccountTest {
     }
 
     @Test
-    public void should_store_withdrawal() {
+    public void shouldStoreWithdrawal() {
         account.addOperation(new Operation(OperationType.DEPOSIT, 100, "", 100));
         assertEquals(1, account.getOperations().size());
     }
