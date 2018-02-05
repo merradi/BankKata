@@ -12,8 +12,9 @@ import bank.account.Customer;
 import bank.exception.BankOperationException;
 import bank.operation.Operation;
 import bank.operation.OperationType;
+import bank.utils.DateUtils;
 
-public class Bank {
+public class Bank{
 
     private List<Account> accounts;
 
@@ -21,36 +22,36 @@ public class Bank {
         this.accounts = new ArrayList<>();
     }
 
-    public Account createAccount(Customer client, int operationAmount) {
+    public Account createAccount(Customer client, int operation_amount) {
     	
     	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     	Date today = Calendar.getInstance().getTime();        
     	String reportDate = df.format(today);
-    	int balance = operationAmount;
+    	int balance = operation_amount;
     	
         Account account = new Account(client);
-        account.addOperation(new Operation(OperationType.DEPOSIT, operationAmount, reportDate, balance));
+        account.addOperation(new Operation(OperationType.DEPOSIT, operation_amount, reportDate, balance));
         accounts.add(account);
         return account;
     }
     
-    public void addDepositOperation(Account account, int operationAmount) throws BankOperationException {
-    	if (!isPositive(operationAmount)) {
+    public void addDepositOperation(Account account, int operation_amount) throws BankOperationException {
+    	if (!isPositive(operation_amount)) {
     		throw new BankOperationException("Amount can't be negative");
     	}
-    	int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() + operationAmount;
+    	int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() + operation_amount;
     	
-    	account.addOperation(new Operation(OperationType.DEPOSIT, operationAmount, getDate(), balance));
+    	account.addOperation(new Operation(OperationType.DEPOSIT, operation_amount, DateUtils.getDate(), balance));
     	
 	}
 
     
-    public void addWithdrawOperation(Account account, int operationAmount) {
-        if (!isPositive(operationAmount)) {
+    public void addWithdrawOperation(Account account, int operation_amount) {
+        if (!isPositive(operation_amount)) {
             throw new IllegalArgumentException("You must withdraw a positive value!");
         }
-        int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() - operationAmount;
-        account.addOperation(new Operation(OperationType.WITHDRAWAL, operationAmount, getDate(), balance));
+        int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() - operation_amount;
+        account.addOperation(new Operation(OperationType.WITHDRAWAL, operation_amount, DateUtils.getDate(), balance));
     }
     
     public int getBalance(Account account) {
@@ -63,11 +64,5 @@ public class Bank {
         return amount > 0;
     }
     
-    private String getDate() {
-    	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-    	Date today = Calendar.getInstance().getTime();        
-    	String reportDate = df.format(today);
-    	return reportDate;
-    	
-    }
+   
 }
