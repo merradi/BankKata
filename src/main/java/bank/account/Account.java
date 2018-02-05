@@ -8,7 +8,7 @@ import bank.operation.Operation;
 
 public class Account {
 	
-	private String account_Id;
+	private String accountId;
 
     private Customer client;
 
@@ -33,11 +33,11 @@ public class Account {
     }
 
 	public String getAccountId() {
-		return account_Id;
+		return accountId;
 	}
 
 	public void setAccountId(String account_Id) {
-		this.account_Id = account_Id;
+		this.accountId = account_Id;
 	}
 
 	public Customer getClient() {

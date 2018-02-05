@@ -2,40 +2,40 @@ package bank.operation;
 
 public class Operation {
 	
-	  private OperationType operation_Type;
-	    private int operation_amount;
-	    private String operation_date;
+	  private OperationType operationType;
+	    private int operationAmount;
+	    private String operationDate;
 	    private int balance;
 	    
-		public Operation(OperationType operation_Type, int operation_amount, String operation_date, int balance) {
-			this.operation_Type = operation_Type;
-			this.operation_amount = operation_amount;
-			this.operation_date = operation_date;
+		public Operation(OperationType operationType, int operationAmount, String operationDate, int balance) {
+			this.operationType = operationType;
+			this.operationAmount = operationAmount;
+			this.operationDate = operationDate;
 			this.setBalance(balance);
 		}
 
 		public OperationType getOperationType() {
-			return operation_Type;
+			return operationType;
 		}
 
 		public void setOperationType(OperationType operation_Type) {
-			this.operation_Type = operation_Type;
+			this.operationType = operation_Type;
 		}
 
 		public int getOperationAmount() {
-			return operation_amount;
+			return operationAmount;
 		}
 
 		public void setOperationAmount(int operation_amount) {
-			this.operation_amount = operation_amount;
+			this.operationAmount = operation_amount;
 		}
 
 		public String getOperationDate() {
-			return operation_date;
+			return operationDate;
 		}
 
 		public void getOperationDate(String operation_date) {
-			this.operation_date = operation_date;
+			this.operationDate = operation_date;
 		}
 
 		public int getBalance() {

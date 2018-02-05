@@ -2,18 +2,18 @@ package bank.account;
 
 public class Customer {
 
-    private String client_name;
+    private String clientName;
 
-	public Customer(String client_name) {
-		this.client_name = client_name;
+	public Customer(String clientName) {
+		this.clientName = clientName;
 	}
 
 	public String getClientName() {
-		return client_name;
+		return clientName;
 	}
 
-	public void setClientName(String client_name) {
-		this.client_name = client_name;
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
 	}
 
 }
