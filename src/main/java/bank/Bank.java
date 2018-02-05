@@ -21,36 +21,36 @@ public class Bank {
         this.accounts = new ArrayList<>();
     }
 
-    public Account createAccount(Customer client, int operation_amount) {
+    public Account createAccount(Customer client, int operationAmount) {
     	
     	DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     	Date today = Calendar.getInstance().getTime();        
     	String reportDate = df.format(today);
-    	int balance = operation_amount;
+    	int balance = operationAmount;
     	
         Account account = new Account(client);
-        account.addOperation(new Operation(OperationType.DEPOSIT, operation_amount, reportDate, balance));
+        account.addOperation(new Operation(OperationType.DEPOSIT, operationAmount, reportDate, balance));
         accounts.add(account);
         return account;
     }
     
-    public void addDepositOperation(Account account, int operation_amount) throws BankOperationException {
-    	if (!isPositive(operation_amount)) {
+    public void addDepositOperation(Account account, int operationAmount) throws BankOperationException {
+    	if (!isPositive(operationAmount)) {
     		throw new BankOperationException("Amount can't be negative");
     	}
-    	int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() + operation_amount;
+    	int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() + operationAmount;
     	
-    	account.addOperation(new Operation(OperationType.DEPOSIT, operation_amount, getDate(), balance));
+    	account.addOperation(new Operation(OperationType.DEPOSIT, operationAmount, getDate(), balance));
     	
 	}
 
     
-    public void addWithdrawOperation(Account account, int operation_amount) {
-        if (!isPositive(operation_amount)) {
+    public void addWithdrawOperation(Account account, int operationAmount) {
+        if (!isPositive(operationAmount)) {
             throw new IllegalArgumentException("You must withdraw a positive value!");
         }
-        int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() - operation_amount;
-        account.addOperation(new Operation(OperationType.WITHDRAWAL, operation_amount, getDate(), balance));
+        int balance = account.getOperations().get(account.getOperations().size()-1).getBalance() - operationAmount;
+        account.addOperation(new Operation(OperationType.WITHDRAWAL, operationAmount, getDate(), balance));
     }
     
     public int getBalance(Account account) {
