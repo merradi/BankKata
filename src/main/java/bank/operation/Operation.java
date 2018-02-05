@@ -18,24 +18,24 @@ public class Operation {
 			return operationType;
 		}
 
-		public void setOperationType(OperationType operation_Type) {
-			this.operationType = operation_Type;
+		public void setOperationType(OperationType operationType) {
+			this.operationType = operationType;
 		}
 
 		public int getOperationAmount() {
 			return operationAmount;
 		}
 
-		public void setOperationAmount(int operation_amount) {
-			this.operationAmount = operation_amount;
+		public void setOperationAmount(int operationAmount) {
+			this.operationAmount = operationAmount;
 		}
 
 		public String getOperationDate() {
 			return operationDate;
 		}
 
-		public void getOperationDate(String operation_date) {
-			this.operationDate = operation_date;
+		public void getOperationDate(String operationDate) {
+			this.operationDate = operationDate;
 		}
 
 		public int getBalance() {
